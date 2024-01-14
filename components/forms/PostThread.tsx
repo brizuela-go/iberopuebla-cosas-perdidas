@@ -124,6 +124,7 @@ function PostThread({ userId }: Props) {
                   <LucideImage className="w-10 h-10 mr-2 text-primary-500 hover:bg-gray-800 rounded-lg cursor-pointer transition ease-in-out duration-200" />
                   <Input
                     type="file"
+                    accept="image/*"
                     onChange={onFileChange}
                     className="hidden"
                   />
