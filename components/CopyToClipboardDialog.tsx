@@ -41,6 +41,7 @@ export default function CopyToClipboardDialog({ id }: { id: string }) {
 
         <Label className="text-white">Link</Label>
         <Input
+          disabled
           readOnly
           value={`https://iberopuebla-cosas-perdidas.vercel.app/thread/${id}`}
           className="bg-dark-3 text-white"
