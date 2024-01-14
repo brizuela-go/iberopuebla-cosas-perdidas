@@ -31,6 +31,7 @@
     "eslint-config-prettier": "^8.10.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-tailwindcss": "^3.13.1",
+    "firebase": "^10.7.1",
     "lucide-react": "^0.260.0",
     "micro": "^10.0.1",
     "mongoose": "^7.6.8",

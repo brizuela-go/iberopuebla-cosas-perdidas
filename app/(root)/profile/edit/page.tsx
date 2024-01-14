@@ -30,7 +30,7 @@ async function Page() {
       </p>
 
       <section className="mt-12">
-        <AccountProfile user={userData} btnTitle="Continue" />
+        <AccountProfile user={userData} btnTitle="Guardar" />
       </section>
     </>
   );

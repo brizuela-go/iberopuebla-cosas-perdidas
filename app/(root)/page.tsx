@@ -23,6 +23,8 @@ async function Home({
     30
   );
 
+  console.log(result.posts[0]);
+
   return (
     <>
       <h1 className="head-text text-left">Inicio</h1>
@@ -36,6 +38,7 @@ async function Home({
               <ThreadCard
                 key={post._id}
                 id={post._id}
+                imageUrl={post.imageUrl}
                 currentUserId={user.id}
                 parentId={post.parentId}
                 content={post.text}
