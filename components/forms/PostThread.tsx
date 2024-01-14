@@ -121,14 +121,16 @@ function PostThread({ userId }: Props) {
               <FormMessage />
               <div className="flex flex-row justify-between items-center">
                 <label className="flex flex-row justify-between items-center">
-                  <LucideImage className="w-10 h-10 mr-2 text-primary-500" />
+                  <LucideImage className="w-10 h-10 mr-2 text-primary-500 hover:bg-gray-800 rounded-lg cursor-pointer transition ease-in-out duration-200" />
                   <Input
                     type="file"
                     onChange={onFileChange}
                     className="hidden"
                   />
                 </label>
-                <p className="text-light-2 text-sm">Opcional</p>
+                <p className="text-light-2 text-sm">
+                  La imagen puede ser opcional
+                </p>
               </div>
               <div className="flex flex-row justify-between items-center ">
                 {image && (
