@@ -25,7 +25,7 @@ export function formatDateString(dateString: string) {
   const formattedDate = date.toLocaleDateString("es-MX", options);
 
   const time = date.toLocaleTimeString("es-MX", {
-    hour: "numeric",
+    hour: "2-digit",
     minute: "2-digit",
   });
 
