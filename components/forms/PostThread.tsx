@@ -20,7 +20,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "../ui/input"; // Updated import path if necessary
-import { LucideImage } from "lucide-react";
+import { Loader2, LucideImage } from "lucide-react";
 
 import { ThreadValidation } from "@/lib/validations/thread";
 import { createThread } from "@/lib/actions/thread.actions";
@@ -37,6 +37,8 @@ function PostThread({ userId }: Props) {
   const pathName = usePathname();
   const [image, setImage] = useState("");
   const [file, setFile] = useState<any>(null);
+
+  const [submitting, setSubmitting] = useState(false);
 
   const { organization } = useOrganization();
 
@@ -88,6 +90,7 @@ function PostThread({ userId }: Props) {
   };
 
   const onSubmit = async (values: z.infer<typeof ThreadValidation>) => {
+    setSubmitting(true);
     const imageUrl = await uploadImage(); // Wait for the image to be uploaded
 
     await createThread({
@@ -141,9 +144,16 @@ function PostThread({ userId }: Props) {
             </FormItem>
           )}
         />
-        <Button type="submit" className="bg-primary-500">
-          Publicar
-        </Button>
+        {submitting ? (
+          <Button disabled>
+            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            Publicando...
+          </Button>
+        ) : (
+          <Button type="submit" className="bg-primary-500">
+            Publicar
+          </Button>
+        )}
       </form>
     </Form>
   );
