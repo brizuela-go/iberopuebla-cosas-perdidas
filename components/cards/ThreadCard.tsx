@@ -79,6 +79,7 @@ function ThreadCard({
                   width={700}
                   height={700}
                   className="rounded-xl"
+                  priority
                 />
               </div>
             )}
