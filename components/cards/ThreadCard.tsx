@@ -118,7 +118,7 @@ function ThreadCard({
       </div>
 
       {!isComment && comments.length > 0 && (
-        <div className="ml-1 mt-3 flex items-center gap-2">
+        <div className="ml-1 mt-3 flex items-start justify-center flex-col gap-2">
           {comments.slice(0, 2).map((comment, index) => (
             <Image
               key={index}
@@ -132,7 +132,7 @@ function ThreadCard({
 
           <Link href={`/thread/${id}`}>
             <p className="mt-1 text-subtle-medium text-gray-1">
-              {comments.length} repl{comments.length > 1 ? "ies" : "y"}
+              {comments.length} comentari{comments.length > 1 ? "os" : "o"}
             </p>
           </Link>
         </div>
@@ -144,8 +144,7 @@ function ThreadCard({
           className="mt-5 flex items-center"
         >
           <p className="text-subtle-medium text-gray-1">
-            {formatDateString(createdAt)}
-            {community && ` - ${community.name} Community`}
+            {community && `${community.name} Comunidad`}
           </p>
 
           <Image
@@ -157,6 +156,10 @@ function ThreadCard({
           />
         </Link>
       )}
+
+      <p className="text-subtle-medium text-gray-1 mt-6">
+        {formatDateString(createdAt)}
+      </p>
     </article>
   );
 }

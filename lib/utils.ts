@@ -18,10 +18,11 @@ export function formatDateString(dateString: string) {
     year: "numeric",
     month: "short",
     day: "numeric",
+    weekday: "short",
   };
 
   const date = new Date(dateString);
-  const formattedDate = date.toLocaleDateString(undefined, options);
+  const formattedDate = date.toLocaleDateString("es-MX", options);
 
   const time = date.toLocaleTimeString([], {
     hour: "numeric",
@@ -34,10 +35,10 @@ export function formatDateString(dateString: string) {
 // created by chatgpt
 export function formatThreadCount(count: number): string {
   if (count === 0) {
-    return "No Threads";
+    return "Sin hilos";
   } else {
     const threadCount = count.toString().padStart(2, "0");
-    const threadWord = count === 1 ? "Thread" : "Threads";
+    const threadWord = count === 1 ? "Hilo" : "Hilos";
     return `${threadCount} ${threadWord}`;
   }
 }

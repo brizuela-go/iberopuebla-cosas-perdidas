@@ -31,7 +31,7 @@ export default function RootLayout({
       }}
       localization={esES}
     >
-      <html lang="en">
+      <html lang="es">
         <body className={inter.className}>
           <Topbar />
 
