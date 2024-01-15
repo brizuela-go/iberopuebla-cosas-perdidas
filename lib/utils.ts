@@ -27,6 +27,7 @@ export function formatDateString(dateString: string) {
   const time = date.toLocaleTimeString("es-MX", {
     hour: "2-digit",
     minute: "2-digit",
+    timeZone: "America/Mexico_City",
   });
 
   return `${time} - ${formattedDate}`;
