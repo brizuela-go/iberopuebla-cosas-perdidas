@@ -73,11 +73,11 @@ function ThreadCard({
             <p className="mt-2 text-small-regular text-light-2">{content}</p>
             {imageUrl && (
               <div className="mt-3">
-                <img
+                <Image
                   src={imageUrl}
                   alt="cosa_perdida"
-                  width={500}
-                  height={500}
+                  width={700}
+                  height={700}
                   className="rounded-xl"
                 />
               </div>
